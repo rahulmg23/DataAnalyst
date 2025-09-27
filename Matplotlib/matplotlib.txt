@@ -1,0 +1,101 @@
+matplotlib
+
+
+import matplotlib.pyplot as plt
+
+
+x = [1,2,3,4,5]
+y = [1,4,9,16,25]
+
+
+
+##creating a line plot 
+
+plt.plot(x,y)
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('basic line plot')
+plt.show()
+
+##customising line plot
+
+x = [1,2,3,4,5]
+y = [1,4,9,16,25]
+
+plt.plot(x,y,color = 'red', linestyle = '--', marker = 'o', linewidth = 2, markersize = 2)
+plt.grid(True)
+
+## creating multuiple plots
+## sample data
+
+x =  [1,2,3,4,5]
+y1 = [1,4,9,16,25]
+y2 = [1,2,3,4,5]
+
+plt.figure(figsize = (9,5))
+
+plt.subplot(1,2,1)
+plt.plot(x,y1, color = 'green')
+plt.title('plot 1')
+plt.grid(True)
+
+
+plt.subplot(1,2,2)
+plt.plot(y1, x, color = 'red')
+plt.title('plot 2')
+plt.grid(True)
+
+
+plt.subplot(2,2,3)
+plt.plot(x, y2 ,color = 'red')
+plt.title('plot 3')
+plt.grid(True)
+
+plt.subplot(2,2,4)
+plt.plot(y2, x ,color = 'red')
+plt.title('plot 4')
+plt.grid(True)
+
+
+
+## creating bar plot
+
+categories = ['a', 'b', 'c', 'd', 'e']
+values = [5,7,3,8,6]
+
+plt.bar(categories, values, color = 'red')
+
+
+
+##histogram
+
+##histogram is used to basically represent the distrubution of a dataset,they divide the data in bins and count the no of data points in each bin.
+
+##creating a histogram
+
+data = [1,2,2,3,3,3,4,4,4,4,5,5,5,5,5]
+
+#plotting the histogram
+plt.hist(data, bin=5, color = 'orange', edge = 'black')
+
+
+
+##creating a scatter plot
+plt.scatter(x,y, marker = 'red', color = 'blue')
+
+##creating pie charts
+
+labels = ['a','b','c','d']
+sizes = [30,20,40,10]
+colors = ['gold', 'red', 'green', 'blue']
+explode=(0.2,0,0,0)
+
+##creating a pie chart
+
+plt.pie(labels,sizes, colors = colors, autopct = '%1.1f%%', shadow = true, explode = explode)
+
+
+import pandas as pd
+
+sales_data_df = pd.read_csv(r'C:\Users\raulg\Downloads\data.csv') 
+print(sales_data_df.head(5))

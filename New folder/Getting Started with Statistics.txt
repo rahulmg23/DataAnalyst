@@ -1,0 +1,193 @@
+Getting Started with Statistics
+
+
+Statistics 
+
+It is the science of collecting , organizing and analyzing data.
+
+
+Data
+
+Facts or pieces of information, measured , collected and analyzed.
+
+
+Applications
+Data exploration
+Model building and validation
+Statical analysis
+optimization and efficiency
+
+
+
+Types of statistics
+
+Descriptive statistics
+It involves  methods for summarizing and organizing the data to make it understandable , this helps to describe the basic features of the data in a study 
+
+measure of central tendency mean , median and mode
+
+means of dispersion variance , standard deviation
+
+data distribution, histogram , box plot , pie chart, pdf, pmf
+
+summary statistics  five no summary q1,q2,q3,q4
+
+
+
+Inferential statistics
+Involves methods for making predictions or inferences about a population based on a sample of data .It allows a hypothesis testing, estimation, and drawing conclusions.
+
+hypothesis testing
+p value 
+confidence interval 
+statistics analysis test imp
+
+
+eg there are 20 statistics in your college and you have collected the height of students in the class
+heights are recorded 
+desip, what is the avg height of the class room measure of central tendency 
+infre, are the height of the sample students in the classroom similar to what you expect in the entire college
+
+
+
+
+sec 3
+
+Population and sample data
+
+Population 
+A population is the entire set of the objects or individuals of interest in a particular study , it includes all the members of a defined group that we are studying or collecting information
+
+characteristics
+complete set: contains all the observation of interest 
+parameter: a numerical value summarizing all the data 
+
+population mean()
+population variance 
+
+eg 1 population of student heights determine
+market research 
+medical study 
+
+
+Sample data
+It is the subset of the population that is used to represent the entire group, sampling involves selecting a group of individuals or observations from the population to draw conclusion about the whole world.
+
+Characteristics
+subset: it represents a portion of a population
+statistics: a numerical value summarizing the data
+sample  mean and variance
+Random sampling
+
+eg estimating
+behavior
+effectives  of a drug
+
+
+
+
+sec 4
+
+SAMPLING TECHNIQUES
+eg exit poll after elections
+
+
+Probability sampling
+every member of population has an equal chance of getting selected
+
+Systematic sampling 
+every n th person 
+eg credit cards in airport, feedback survey and selected 11 member 
+
+Stratified sampling
+we divide the population in a strata in groups,  and segrate the groups by specifics characteristics 
+eg age, division in a dep in office
+
+Clustered sampling
+divide the population in cluster, randomly selecting cluster then sampling all the members from the 
+
+Multi stage sampling
+Combining several cluster methods, usually involves selecting the clusters, then randomly sampling the clusters
+eg , randomly selecting city
+
+
+
+Non probability
+individual ppl who are easy to reach
+
+Convince Sampling
+easy to reach
+
+Judgmental Sampling
+based on researchers judgment 
+eg choose experts in the field
+
+Snowball sampling
+choosing people among them
+
+Quota Sampling
+eg caste, 
+
+
+
+Types of Data
+
+Quantitative data (numerical)
+
+discrete 	and 	continuous 
+whole no		any value
+no on bank acc
+children
+
+Qualitative Data  (categorical)
+
+Nominal	 and	 Ordinal 
+gender	    ranks on the data, customer feedback, 
+m, f
+
+
+
+SCALES OF MEASURMENT OF DATA
+It measures the nature of the information within the values assigned to the variables
+
+
+4 primary scales of measurement
+
+NOMINAL SCALES
+It classifies data into distinct categories that do not have an intensive order.
+eg qualitative data 
+
+characteristics 
+based on labels, ranks 
+mutually exclusive 
+no logical order among categories
+eg gender , color red 5, blue 3 , pink -2
+
+ORDINAL SCALES
+
+Classifies the data into categorize that can be ranked or ordered
+
+characteristics
+data is categorized and ranked in a specific order
+interval between the ranks are not necessary equal
+eg: educational level, customer feedback 
+
+
+INTERVAL SCALE
+It categories the order and also specifies the exact difference between the intervals ,and also lack the true 0 point 
+
+Characteristics
+data is ordered and consistent intervals between the values
+allows between the meaningful comparison between the difference
+no true 0 point
+ratio cannot be measured
+
+eg temp 
+
+RATIO SCALE
+
+Order matters 
+differences are measured 
+contains 0 starting point
+ratio can be measured 
+eg student marks in a class 

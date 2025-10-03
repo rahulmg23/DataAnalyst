@@ -7,7 +7,7 @@ CREATE TABLE Customers (
 
 
 CREATE TABLE Orders (
-    order_id INT PRIMARY KEY,
+    order_id INT PRIMARY KEY ,
     customer_id INT,
     order_date DATE,
     amount DECIMAL(10, 2),

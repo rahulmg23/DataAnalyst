@@ -126,3 +126,26 @@ FROM Weather w1
 JOIN Weather w2 
 WHERE DATEDIFF(w1.recordDate , w2.recordDate) = 1
 AND w1.temperature > w2.temperature 
+
+
+
+<--620. Not Boring Movies -->
+SELECT * FROM Cinema 
+WHERE id %2 != 0  AND description  != 'boring'
+order by id DESC
+
+<--1251. Average Selling Price-->
+SELECT p.product_id , IFNULL(ROUND(SUM(p.price*us.units)/SUM(us.units),2),0) AS average_price 
+FROM prices p
+LEFT JOIN UnitsSold us
+ON p.product_id  = us.product_id 
+AND us.purchase_date >= p.start_date 
+AND us.purchase_date <= p.end_date   
+GROUP BY p.product_id
+
+<-- 1075. Project Employees I -->
+SELECT p.project_id, ROUND(AVG(e.experience_years),2) AS average_years
+FROM Project p
+LEFT JOIN Employee e
+ON p.employee_id = e.employee_id
+GROUP BY p.project_id;

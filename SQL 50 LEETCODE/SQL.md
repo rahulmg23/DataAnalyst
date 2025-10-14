@@ -144,7 +144,7 @@ AND us.purchase_date <= p.end_date
 GROUP BY p.product_id
 
 <-- 1075. Project Employees I -->
-SELECT p.project_id, ROUND(AVG(e.experience_years),2) AS average_years
+SELECT p.project_id, ROUND(AVG(e.experience_years),2) AS average_year s
 FROM Project p
 LEFT JOIN Employee e
 ON p.employee_id = e.employee_id

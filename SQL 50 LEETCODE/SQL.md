@@ -149,3 +149,15 @@ FROM Project p
 LEFT JOIN Employee e
 ON p.employee_id = e.employee_id
 GROUP BY p.project_id;
+
+
+<-- 1633. Percentage of Users Attended a Contest -->
+SELECT contest_id  ,  ROUND(COUNT(DISTINCT user_id) * 100 /( SELECT (COUNT(user_id)) FROM  Users),2) AS percentage 
+FROM Register 
+GROUP by contest_id
+ORDER by percentage desc, contest_id
+
+<-- 1211. Queries Quality and Percentage -->
+SELECT query_name ,  ROUND(AVG(rating/position),2)  AS quality , ROUND(AVG(IF(rating < 3, 1, 0)*100),2) AS poor_query_percentage 
+FROM Queries 
+GROUP BY query_name

@@ -138,3 +138,107 @@ ORDER by percentage desc, contest_id
 SELECT query_name ,  ROUND(AVG(rating/position),2)  AS quality , ROUND(AVG(IF(rating < 3, 1, 0)*100),2) AS poor_query_percentage 
 FROM Queries 
 GROUP BY query_name
+
+
+--
+
+<-- 1731. The Number of Employees Which Report to Each Employee -->
+SELECT 
+        E1.employee_id,
+        E1.name,
+        COUNT(E2.reports_to ) AS reports_count,
+        ROUND(AVG(E2.age )) AS average_age
+FROM    
+        Employees E1 
+INNER JOIN 
+        Employees E2 
+ON      
+        E1.employee_id = E2.reports_to 
+GROUP BY 
+        E1.employee_id ,
+        E1.name 
+ORDER BY
+        E1.employee_id
+
+
+
+
+<-- Primary Department for Each Employee-->
+
+SELECT 
+        employee_id ,department_id 
+FROM    
+        Employee 
+WHERE  
+        employee_id  
+IN
+    (   
+        SELECT
+             employee_id
+        FROM
+            Employee 
+        GROUP BY 
+             employee_id
+        HAVING COUNT(*) = 1       
+    )
+OR 
+primary_flag = 'Y'
+
+
+
+<-- 610. Triangle Judgement -->
+SELECT 
+        *,
+        IF(x+y>z AND y+z>x AND z+x>y, "Yes", "No") AS Triangle
+FROM
+        Triangle
+
+
+
+<-- 180. Consecutive Numbers -->
+SELECT  
+    DISTINCT l1.num AS ConsecutiveNums 
+FROM
+    Logs l1,  Logs l2,  Logs l3 
+WHERE
+    l1.id = l2.id - 1 AND L2.id = l3.id - 1
+AND 
+    l1.num= l2.num AND l2.num = l3.num
+
+
+<-- 1164. Product Price at a Given Date -->
+
+SELECT 
+    product_id , new_price  AS price 
+FROM 
+    Products 
+WHERE 
+    (product_id , change_date) IN
+    (
+        SELECT
+            product_id , max(change_date)  
+        FROM 
+            Products 
+        WHERE
+            change_date <= "2019-08-16"
+        GROUP BY
+            product_id
+    )
+
+UNION
+
+    SELECT     
+        product_id , 10 AS price 
+    FROM
+        Products
+    WHERE 
+        product_id NOT IN
+    (
+        
+        SELECT
+            product_id 
+        FROM 
+            Products 
+        WHERE
+            change_date <= "2019-08-16"
+    )

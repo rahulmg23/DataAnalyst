@@ -1,6 +1,5 @@
-
-
 -- Create the Products table
+
 CREATE TABLE Products (
     ProductID INT PRIMARY KEY,
     ProductName VARCHAR(50),

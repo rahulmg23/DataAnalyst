@@ -1,4 +1,4 @@
-select * from sales
+select * from sale
 
 SELECT PaymentMethod, SUM(TotalAmount) AS [SUM OF SALES]FROM SALES
 GROUP BY PaymentMethod

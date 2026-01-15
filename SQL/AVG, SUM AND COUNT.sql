@@ -1,6 +1,6 @@
 SELECT * FROM SALES
 
-select sum(quantity) as [sum], sum(TotalAmount) as [Total]	from SALES
+select SUM(quantity) as [sum], sum(TotalAmount) as [Total]	from SALES
 
 SELECT AVG(Quantity) as [Quantity], AVG(TotalAmount) as [TotalAmount] FROM Sales
 
